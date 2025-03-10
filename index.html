@@ -4,27 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <!-- Подключаем Normalize.css -->
-    <link rel="stylesheet" href="css/normalize.css">
-    
+    <link rel="icon" href="favicon.ico" type="image/x-icon"
     <!-- Подключаем Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- Подключаем Font Awesome -->
+    <!-- Подключаем Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    
-    <!-- Подключаем стили -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <!-- Навигационное меню -->
     <header>
         <nav class="navbar">
             <div class="container">
-                <div class="navbar-logo">Моя Визитка</div>
+                <div class="navbar-logo">
+                    Моя Визитка
+                </div>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#main">Главная</a></li>
                     <li><a href="#about-me">Обо мне</a></li>
@@ -34,14 +28,12 @@
             </div>
         </nav>
     </header>
-
     <!-- Кнопка для возврата наверх -->
-    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Наверх">
-        <i class="fa fa-arrow-up" aria-hidden="true"></i>
-    </button>
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Наверх"> <i class="fa fa-arrow-up" aria-hidden="true"></i>  </button>
 
     <!-- Главный раздел -->
-    <section class="hero" id="main">
+    <a name="main"></a>
+    <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="profile-pic">
@@ -50,65 +42,82 @@
                 <div class="info">
                     <h1>Чурбанова София Ивановна</h1>
                     <p>Студентка Московского политехнического университета</p>
-                    <p>Группа 241-325</p>
+                    <p>группа 241-325</p>
                     <ul class="contact-info">
                         <li><i class="fas fa-phone"></i> <a href="tel:+79162706838">+7 (916) 270-68-38</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:sofchurbanova97@gmail.com">sofchurbanova97@gmail.com</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:sofchurbanova97@gmail.com">sofchurbanova97@gmail.com</a> </li>
                         <li><i class="fas fa-calendar"></i> 3 октября 2006г.</li>
+                        <a name="about-me"></a>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Раздел "Обо мне" -->
-    <section class="about-me" id="about-me">
+    <!-- Дополнительный контент -->
+   
+    <section class="about-me">
         <div class="container">
             <h2>Обо мне</h2>
+            <p>
             <table>
-                <tr><td>1</td><td>2</td><td>3</td></tr>
-                <tr><td>4</td><td>5</td><td>6</td></tr>
-                <tr><td>7</td><td>8</td><td>9</td></tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr> <td>1</td>
+                    <td>2</td>
+                    <td>3</td></tr>
+                <tr> <td>1</td>
+                    <td>2</td>
+                    <td>3</td></tr>
             </table>
+            </p>
+            <!-- Вы можете добавить фотографии, галереи или другие элементы для заполнения страницы -->
         </div>
     </section>
 
-    <!-- Раздел "Проекты" -->
-    <section class="projects" id="projects">
+    
+    <section class="projects">
         <div class="container">
+            <a name="projects"></a>
             <h2>Мои проекты</h2>
             <p>Скоро...</p>
         </div>
     </section>
+    
+    
 
     <!-- Подвал -->
     <footer>
         <div class="container">
-            <p>&copy; <a href="https://sof-churbanova.ru" style="color: aliceblue;">sof-churbanova.ru</a> 2024. Все права защищены.</p>
+            <p>&copy; <a style="color: aliceblue;" href=https://sof-churbanova.ru>sof-churbanova.ru</a> 2024    . Все права защищены.</p>
         </div>
     </footer>
 
-    <!-- Скрипты -->
+    <!-- Скрипт для адаптивного меню -->
     <script>
         function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
+            var navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
         }
-
         window.onscroll = function() { scrollFunction() };
 
         function scrollFunction() {
-            let scrollToTopBtn = document.getElementById("scrollToTopBtn");
-            if (document.documentElement.scrollTop > 200) {
+            var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                 scrollToTopBtn.style.display = "block";
             } else {
                 scrollToTopBtn.style.display = "none";
             }
         }
-
+        
+          
+        // Возвращение наверх
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
-
 </body>
 </html>
