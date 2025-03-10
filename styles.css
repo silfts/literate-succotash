@@ -18,18 +18,18 @@ body {
 
 /* Контейнер */
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Навигация */
+/* Навигация (обновлено) */
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 15px 20px;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    background: transparent;
     position: fixed;
     top: 0;
     width: 100%;
@@ -46,11 +46,13 @@ body {
     text-decoration: none;
     color: var(--text-color);
     font-size: 18px;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover {
-    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
 }
 
 /* Главный блок */
@@ -89,15 +91,34 @@ body {
     color: var(--text-color);
 }
 
+/* Таблица (обновлено) */
 .about-me table {
     width: 80%;
     margin: 0 auto;
     border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--light-bg);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-me th, .about-me td {
+    padding: 12px;
+    text-align: center;
+}
+
+.about-me th {
+    background: var(--accent-color);
+    color: white;
+    font-weight: bold;
 }
 
 .about-me td {
-    padding: 10px;
-    border: 2px solid green;
+    border-bottom: 1px solid #ddd;
+}
+
+.about-me tr:hover {
+    background: #fce4ec;
 }
 
 /* Раздел "Проекты" */
