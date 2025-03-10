@@ -23,36 +23,54 @@ body {
     padding: 20px;
 }
 
-/* Навигация (обновлено) */
+/* Закрепленное верхнее меню (обновлено) */
 .navbar {
     display: flex;
     justify-content: center;
     gap: 30px;
     padding: 15px 0;
-    background: transparent;
+    background: white;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 100;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-color);
     font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
     transition: all 0.3s ease;
-    padding-bottom: 3px;
-    border-bottom: 2px solid transparent;
+    border-radius: 5px;
 }
 
 .nav-links a:hover {
-    border-bottom: 2px solid var(--accent-color);
+    background: var(--accent-color);
+    color: white;
+}
+
+
+.hamburger-menu {
+    display: none !important;
+}
+
+/* Отступ для контента, чтобы не перекрывался меню */
+.hero,
+.about-me,
+.projects {
+    padding-top: 80px;
 }
 
 /* Главный блок */
@@ -61,7 +79,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 150px 20px 50px;
+    padding: 100px 20px 50px;
 }
 
 .profile-pic img {
@@ -91,7 +109,7 @@ body {
     color: var(--text-color);
 }
 
-/* Таблица (обновлено) */
+/* Таблица */
 .about-me table {
     width: 80%;
     margin: 0 auto;
@@ -139,4 +157,3 @@ footer {
     padding: 20px;
     text-align: center;
 }
-
