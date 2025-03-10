@@ -1,104 +1,121 @@
-
+/* Общие стили */
 :root {
     --main-bg-color: #f8e1e7;
     --text-color: #333;
     --accent-color: #e75480;
     --dark-bg: #18191C;
     --light-bg: #fafafa;
-    --font-size-base: 62.5%;
-}
-
-html {
-    font-size: var(--font-size-base); /* 1rem = 10px */
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    background: linear-gradient(180deg, var(--main-bg-color) 0%, #ffffff 100%);
+    padding: 0;
+    background: var(--main-bg-color);
     color: var(--text-color);
+    text-align: center;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Навигация */
 .navbar {
-    background-color: #ffffff;
-    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 20px;
     position: fixed;
-    width: 100%;
     top: 0;
+    width: 100%;
     z-index: 100;
-    transition: top 0.3s;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 1.8rem;
+    font-size: 18px;
     transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
 }
 
 /* Главный блок */
 .hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 14rem 0;
+    text-align: center;
+    padding: 150px 20px 50px;
 }
 
 .profile-pic img {
-    width: 25rem;
+    width: 200px;
     height: auto;
     border-radius: 10%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .info h1 {
-    font-size: 3.6rem;
+    font-size: 28px;
     color: var(--accent-color);
 }
 
 .info p {
-    font-size: 2rem;
+    font-size: 18px;
 }
 
-/* Кнопка "Наверх" */
-#scrollToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 1.8rem;
-    background-color: var(--accent-color);
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    transition: all 0.3s;
-    cursor: pointer;
+/* Раздел "Обо мне" */
+.about-me {
+    background: white;
+    padding: 50px 20px;
+    text-align: center;
 }
 
-#scrollToTopBtn:hover {
-    background-color: var(--text-color);
+.about-me h2 {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.about-me table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.about-me td {
+    padding: 10px;
+    border: 2px solid green;
+}
+
+/* Раздел "Проекты" */
+.projects {
+    background: white;
+    padding: 50px 20px;
+}
+
+.projects h2 {
+    font-size: 24px;
+    color: var(--accent-color);
 }
 
 /* Подвал */
 footer {
-    background-color: var(--dark-bg);
-    color: #fff;
+    background: var(--dark-bg);
+    color: white;
+    padding: 20px;
     text-align: center;
-    padding: 2rem;
 }
 
-/* Таблица */
-table {
-    width: 60rem;
-    border-collapse: collapse;
-    text-align: center;
-    margin: 0 auto;
-    border: 3px solid var(--accent-color);
-}
-
-td {
-    padding: 1rem;
-    border: 3px solid var(--accent-color);
-}
