@@ -1,152 +1,124 @@
+/* Общие стили */
+:root {
+    --main-bg-color: #f8e1e7;
+    --text-color: #333;
+    --accent-color: #e75480;
+    --dark-bg: #18191C;
+    --light-bg: #fafafa;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    background: linear-gradient(180deg, #f8e1e7 0%, #ffffff 100%);
-    color: #333;
+    padding: 0;
+    background: var(--main-bg-color);
+    color: var(--text-color);
+    text-align: center;
 }
 
-
+/* Контейнер */
 .container {
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Навигационное меню */
-/* Стили навигационного меню */
+/* Навигация */
 .navbar {
-    background-color: #ffffff;
-    padding: -20px 0;
-    position: fixed; /* Изменяем на fixed */
-    width: 100%; /* Полная ширина */
-    top: 0;
-    z-index: 100;
-    transition: top 0.3s; /* Плавный переход */
-}
-
-
-.navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.navbar-logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e75480;
+    background-color: white;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    margin: 0 20px;
-    position: relative;
+    gap: 20px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
+    color: var(--text-color);
     font-size: 18px;
     transition: color 0.3s ease;
-    position: relative;
-}
-
-.nav-links a:after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    display: block;
-    margin-top: 5px;
-    right: 0;
-    background: #e75480;
-    transition: width 0.4s ease;
-}
-
-.nav-links a:hover:after {
-    width: 100%;
-    left: 0;
-    background: #e75480;
 }
 
 .nav-links a:hover {
-    color: #e75480;
+    color: var(--accent-color);
 }
 
-.nav-toggle {
-    display: none;
-}
-
-/* Адаптивное меню */
-
-
-/* Главный раздел */
+/* Главный блок */
 .hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 140px 0;
-    background-color: transparent;
-}
-
-.hero-content {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+    text-align: center;
+    padding: 150px 20px 50px;
 }
 
 .profile-pic img {
-    width: 250px;
+    width: 200px;
     height: auto;
     border-radius: 10%;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.info {
-    text-align: center;
-    margin: 20px;
-    max-width: 600px;
 }
 
 .info h1 {
-    font-size: 36px;
-    margin-bottom: 15px;
+    font-size: 28px;
+    color: var(--accent-color);
 }
 
 .info p {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.contact-info {
-    list-style: none;
-    padding: 0;
     font-size: 18px;
 }
 
-.contact-info li {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Раздел "Обо мне" */
+.about-me {
+    background: white;
+    padding: 50px 20px;
+    text-align: center;
 }
 
-.contact-info li i {
-    color: #e75480;
-    margin-right: 10px;
-    font-size: 18px;
+.about-me h2 {
+    font-size: 24px;
+    color: var(--text-color);
 }
+
+.about-me table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.about-me td {
+    padding: 10px;
+    border: 2px solid green;
+}
+
+/* Раздел "Проекты" */
+.projects {
+    background: white;
+    padding: 50px 20px;
+}
+
+.projects h2 {
+    font-size: 24px;
+    color: var(--accent-color);
+}
+
+/* Подвал */
+footer {
+    background: var(--dark-bg);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
 
 /* Дополнительный контент */
 .about-me {
